@@ -108,9 +108,9 @@ def save_command(argv):
     for opt, val in opts:
         if opt in ['-d', '--dbname']:
             if val.find('=') < 0:
-                connoptions['database'] = val
+                connoptions['dbname'] = val
             else:
-                connoptions['dsn'] = val
+                connoptions['conninfo'] = val
         elif opt in ['-h', '--host']:
             connoptions['host'] = val
         elif opt in ['-p', '--port']:
